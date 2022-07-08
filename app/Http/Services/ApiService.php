@@ -5,6 +5,7 @@ use App\Url;
 use App\Click;
 
 class ApiService{
+    /*Get the data to build the data structure of Api*/
     public static function getApiData(){
         $urls = Url::with('clicks')->get();
         $clicks = Click::with('url')->get();
